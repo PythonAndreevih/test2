@@ -1,0 +1,1197 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* main css */
+body {
+    font-family: "Alumni Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+    color: #2D3047;
+    
+}
+body.hidden{
+    overflow-y: hidden;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #2D3047;
+    transition: color ease-in .3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+#about__house:before {
+	display: block;
+	content: "";
+	height: 55px;
+	margin: -55px 0 0;
+}
+#layout:before {
+	display: block;
+	content: "";
+	height: 10px;
+	margin: 0px 0 0;
+}
+
+
+  /* burger */
+  .burger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #8C6659;
+  }
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #8C6659;
+    border-radius: 10px;
+  }
+
+  /* burger */
+
+
+
+/* Header start */
+.header__fixed{
+    position: fixed;  
+    top: 0;  
+    width: 100%;
+    transition: all .7s ease;
+    transform: translateY(80px);
+    
+}
+.header__mobile-list{
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    transition: 0.5s;
+    left: -1200px;
+    z-index: 20;
+}
+.header__mobile-list .list .item{
+    font-size: 16px;
+    font-family: Wix Madefor Text;
+    color: #556877;
+    font-weight: 400;
+    transition: ease-in 0.3s;
+    
+    padding: 40px 40px;
+    text-align: center;
+}
+.header__mobile-list .list .item:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.3s;
+}
+.header__mobile-list .list .item a:hover{
+    color: #8C6659;
+    transition: ease-in 0.3s;
+}
+.header__mobile-list.active {
+    position: fixed;
+    width: 60%;
+    height: 100%;
+    left: 0px;
+    background-color: white;
+    z-index: 20;
+  }
+
+  .header__mobile-close{
+    display: flex;
+    cursor: pointer;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+    
+    
+    z-index: 30;
+}
+.header__mobile-close::before{
+    content: ""; 
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #8C6659;
+    transform: rotate(45deg);
+    z-index: 30;
+}
+.header__mobile-close::after{
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #8C6659;
+    transform: rotate(-45deg);
+    z-index: 30;
+}
+.header{
+    top: -80px;
+    z-index: 11;
+    transition: all .2s ease;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header__wrap{
+    border-bottom: 1px solid #DACFCA;
+    background-color: #FFFBF9;
+    position: relative;
+    z-index: 10;
+}
+.header__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 0px;
+}
+
+.header__nav .list{
+    display: flex;
+}
+.header__nav .item{
+    margin-left: 40px;
+    font-family: Wix Madefor Text;
+    font-size: 16px;
+    font-weight: 400;
+}
+.header__nav .item:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.3s;
+}
+.header__nav .item a{
+    color: #556877;
+}
+.header__nav .item a:hover{
+    color: #8C6659;
+    transition: ease-in 0.3s;
+    
+}
+.header__nav .item:first-child{
+    margin-left: 0px;
+}
+.header__logo{
+    font-family: Wix Madefor Text;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.header__contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header__contact-number{
+    font-family: Alumni Sans;
+    font-size: 30px;
+    font-weight: 700;
+}
+.header__contact-text{
+    font-family: Wix Madefor Text;
+    font-size: 14px;
+    font-weight: 500;
+    color: #A3887B;
+    
+}
+.header__contact-text:hover{
+    color: #8C6659;
+    transition: ease-in 0.3s;
+}
+/* Header end */
+
+
+
+/* slider */
+.slider{
+    background-color: #FFFBF9;
+}
+.slider__row{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.relative{
+    position: relative;
+    overflow: hidden;
+    margin-top: 120px;
+    z-index: 1;
+}
+
+.slider__element::before{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-color: #DACFCA;
+    z-index: -2;
+}
+.slider__element::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    background-color: #A3887B;
+    z-index: -1;
+    left: -80px;
+    top: -10px;
+    border-radius: 100%;
+}
+
+.slider__left h5{
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 50px;
+    padding: 10px 0px;
+    
+}
+.slider__left h1{
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 0%;
+    line-height: 90%;
+    margin-top: 80px;
+
+}
+
+.slider__button{
+    margin-top: 60px;
+}
+.slider__button a:hover{
+    background-color: #8C6659;
+    transition: ease-in 0.3s;
+}
+
+
+.slider__button a{
+    border: none;
+    background-color: #A3887B;
+    padding: 19px 40px ;
+    font-family: Wix Madefor Text;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    transition: ease-in 0.3s;
+    
+}
+
+.slider__right{
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.slider__right-viuwe-text{
+    margin-top: 740px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    margin-bottom: 60px;
+    
+}
+.slider__right-viuwe-text::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #A3887B;
+    width: 565px;
+    top: 40px;
+}
+.slider__right-viuwe-text::before{
+    content: "";
+    position: absolute;
+    height: 495px;
+    background-color: #EDE7E5;
+    width: 660px;
+    left: 70px;
+    top: -400px;
+    z-index: -1;
+}
+
+.slider__right-viuwe-text a{
+    font-family: Alumni Sans;
+    font-size: 24px;
+    font-weight: 700;
+    color: #A3887B;
+    margin-right: 10px;
+}
+.slider__right-viuwe-text a:hover{
+    color: #8C6659;
+    
+    transition: ease-in 0.3s;
+}
+
+.img{
+    position: absolute;
+    right: -85px;
+    height: 700px;
+    
+    
+}
+
+.slider__right-img{
+    position: relative;
+}
+
+/* slider end */
+
+
+
+
+
+/* about house */
+
+.about__up-img img{ 
+    /* width: 100%;
+    height: 100%; */
+    width: 470px ;
+    height: 470px ;
+}
+
+.about__up{
+    display: flex;
+    margin-top: 80px;
+    gap: 133px;
+    
+}
+.about__up-text{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.about__up-text h2{
+    font-size: 80px;
+    font-weight: 700;
+}
+.about__up-text p {
+    font-family: Wix Madefor Text;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: #556877;
+}
+
+
+.about__up-nav{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.about__up-nav p{
+    color: #A3887B;
+    margin-top: 0px;
+}
+
+
+.about__down{
+    display: grid;
+    margin-top: 60px;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    gap: 40px;
+    
+}
+.name:first-child{
+    margin-bottom: 0px;
+}
+.about__down .name{
+    color: #556877;
+    font-size: 16px;
+    font-family: Wix Madefor Text;
+    margin-bottom: 15px;
+    
+
+}
+
+.about__down .text{
+    color: #A3887B;
+    font-size: 30px;
+    
+}
+.about__down .value{
+    color: #A3887B;
+    font-size: 80px;
+}
+
+.about__down-card{
+    border: 1px solid #DACFCA;
+    width: 100%;
+    min-height: 270px;
+    padding: 50px 40px;
+    position: relative;
+    z-index: 10;
+    transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__down-card:before, 
+.about__down-card:after {
+    content: "";
+    z-index: -1;
+    display: block;
+    position: absolute;
+    background: #FFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+
+
+.about__down-card:before {
+    width: calc(100% + 4px);
+    height: 75%;
+    transition: height 0.6s;
+}
+.about__down-card:after {
+    height: calc(100% + 4px);
+    width: 75%;
+    transition: width 0.6s;
+}
+
+.about__down-card:hover:before, 
+.about__down-card:focus:before {
+    height: 20%;
+}
+
+.about__down-card:hover::after, 
+.about__down-card:focus::after {
+    width: 20%;
+}
+
+/* about house end */
+
+
+
+/* layout */
+
+.layout{
+    background-color: #FFFBF9;
+    margin-top: 60px;
+    
+}
+.layout__row{
+    display: flex;
+    
+}
+.layout__left h2{
+    font-size: 75px;
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+.layout__left-button{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-direction: column;   
+}
+
+.layout__left-button .wrap{
+    display: flex;
+    align-items: center;
+    border: 1px solid #A3887B;
+    width: 100%;
+    height: 111px;
+    max-width:470px ;
+    
+    
+    
+}
+
+.layout__left-button .number{
+    font-family: Alumni Sans;
+    font-size: 46px;
+    font-weight: 700;
+    color: #A3887B;
+    margin-left: 65px;
+    position: relative;
+    z-index: 1;
+}
+.layout__left-button .number::after{
+    content: "";
+    width: 51px;
+    height: 51px;
+    position: absolute;
+    background-color: #EDE7E5;
+    left: -35px;
+    z-index: -1;
+}
+.layout__left-button .text{
+    font-family: Alumni Sans;
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 30px;
+}
+
+
+.layout__left-button-text{
+    margin-top: 40px;
+    font-family: Wix Madefor Text;
+    font-size: 18px;
+    font-weight: 400;
+    color: #556877;
+}
+
+.layout__left-bottom{
+    display: flex;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+.layout__left-bottom .item h6{
+    font-size: 24px;
+font-weight: 700;
+}
+.layout__left-bottom .item h5{
+    font-size: 46px;
+    font-weight: 700;
+    color: #A3887B;
+}
+.layout__left-bottom .item p{
+    font-family: Wix Madefor Text;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 76px;
+}
+
+.layout__right{
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.4s ease-out;
+    position: relative;
+    
+}
+.layout__right .big__img{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 0;
+    transition: opacity 0.4s ease-out;
+}
+.big__img img{
+    width:100%;
+    height: 100%;
+}
+
+.layout__right .add::after{
+    content: "";
+    position: absolute;
+    width: 267px;
+    height: 499px;
+    background-color: #EDE7E5;
+    opacity: 0.9;
+    left: 315px;
+    z-index: 1;
+    transition: opacity 0.4s ease-out;
+}
+.layout__right .add::before{
+    content: "";
+    position: absolute;
+    width: 315px;
+    height: 499px;
+    background-color: #EDE7E5;
+    opacity: 0;
+    left: 0px;
+    z-index: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.layout__right .hidden::after{
+    content: "";
+    position: absolute;
+    width: 267px;
+    height: 499px;
+    background-color: #EDE7E5;
+    opacity: 0;
+    left: 315px;
+    z-index: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.layout__right .hidden::before{
+    content: "";
+    position: absolute;
+    width: 315px;
+    height: 499px;
+    background-color: #EDE7E5;
+    opacity: 0.9;
+    left: 0px;
+    z-index: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.opaciti{
+    opacity: 0.3;
+    transition: ease-in 0.3s;
+    cursor: pointer;
+}
+.opaciti:hover{
+    opacity: 1;
+    transition: ease-in 0.3s;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.circle::before{
+    content: url(./assets/circle-up.svg);
+    position: absolute;
+    z-index: 1;
+    top: -20px;
+}
+.circle::after{
+    content: url(./assets/circle-bottom.svg);
+    position: absolute;
+    z-index: 1;
+    top: 650px;
+}
+
+/* layout end */
+
+/* apartment */
+.apartment{
+    display: flex;
+    
+}
+.apartment__text{
+    margin-top: 70px;
+    font-size: 55px;
+    font-weight: 700;
+    text-align: center;
+    
+}
+
+.apartment__card-name{
+    font-weight: 700;
+    font-size:29px;
+}
+.apartment__card-text{
+    font-family: Wix Madefor Text;
+    font-weight: 400;
+    font-size:15px;
+    margin-top: 10px;
+    color: #556877;
+}
+.apartment__card-img{
+    margin-top: 40px;
+    margin-left: 120px;
+}
+
+.apartment__grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.apartment__card{
+    border: 1px solid #DACFCA;
+    width: 100%;
+    min-height: 270px;
+    padding: 30px 40px;
+    position: relative;
+    z-index: 10;
+    transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.apartment__card:before, 
+.apartment__card:after {
+    content: "";
+    z-index: -1;
+    display: block;
+    position: absolute;
+    background: #FFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+
+
+.apartment__card:before {
+    width: calc(100% + 4px);
+    height: 75%;
+    transition: height 0.6s;
+}
+.apartment__card:after {
+    height: calc(100% + 4px);
+    width: 75%;
+    transition: width 0.6s;
+}
+
+
+
+.apartment__card:hover:before, 
+.apartment__card:focus:before {
+    height: 20%;
+}
+
+.apartment__card:hover::after, 
+.apartment__card:focus::after {
+    width: 20%;
+}
+
+
+
+.apartment__card-tel{
+    font-size: 40px;
+    font-weight: 700;
+    color: #A3887B;
+}
+.apartment__card-about{
+    font-family: Wix Madefor Text;
+    font-size: 18px;
+    font-weight: 400;
+    color: #556877;
+}
+
+.apartment__card-contact{
+    border: 1px solid #A3887B;
+    width: 100%;
+    min-height: 270px;
+    padding: 30px 40px;
+    z-index: 10;
+    transition: ease-in 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.apartment__card-contact:hover{
+    background-color: #8C6659;
+    transition: ease-in 0.3s
+}
+.apartment__card-contact:hover .apartment__card-tel{
+    color: white;
+}
+.apartment__card-contact:hover .apartment__card-about{
+    color: white;
+}
+
+/* apartment end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* swiper */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .swiper-slide { 
+    outline: none;
+    position: relative;
+    
+  }
+
+
+  .s-button-next{
+    content: url(./assets/right.svg);
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    height: 800px;
+    top: 90px;
+    cursor: pointer;
+    right: 0px;
+    transition: ease-in 0.3s ;
+  }
+  .s-button-prev{
+    content: url(./assets/left.svg);
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    height: 800px;
+    top: 90px;
+    cursor: pointer;
+    left: 0px;
+    transition: ease-in 0.3s ;
+  }
+  .s-button-prev:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.3s ;
+  }
+  .s-button-next:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.3s ;
+  }
+
+/* swiper end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* adaptive */
+
+
+  @media (max-width: 1920px){
+    .burger-menu {
+        display: none;
+    }
+    .s-button-prev-lock{
+        display: none;
+    }
+    .s-button-next-lock{
+        display: none;
+    }
+  }
+
+  @media (max-width: 1495px){
+    .s-button-next{
+        display: none;
+      }
+      .s-button-prev{
+        display: none;
+      }
+      .buton__row{
+        display: flex;
+        align-items: center;
+        margin-top: 80px;
+        justify-content: space-around;
+      }
+      .s-button-prev-lock{
+        display: inline-block;
+    }
+    .s-button-next-lock{
+        display: inline-block;
+    }
+  }
+
+
+  @media (max-width: 1208px) {
+    .buton__row{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .container{
+        max-width: 1000px;
+    }
+    .img{
+        position: relative;
+        max-width: 500px;
+        max-height: 500px;
+        left: 100px;
+        top: 0;
+        
+        
+
+        
+    }
+    .slider__right-viuwe-text{
+        margin-top: 0px;
+        justify-content: end;
+        position: relative;
+    }
+
+    
+    .slider__left h1{
+        font-size: 80px;
+        
+    }
+    .slider__left h5{
+        font-size: 25px;
+        
+    }
+    .slider__button a {
+        font-size: 14px;
+    }
+    .header__contact-number{
+        font-size: 25px;
+    }
+    .header__nav .item{
+        font-size: 14px;
+    }
+    .header__logo{
+        font-size: 15px;
+    }
+    .slider__right-viuwe-text::before{
+        width: 600px;
+        left: 30px;
+    }
+    .slider__right-viuwe-text::after{
+        width: 500px;
+    }      
+    .slider__button{
+        margin-bottom: 0px;
+    }
+    .layout__left h2{
+        font-size: 60px;
+    }
+    .layout__row{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .layout__left-button .wrap{
+        max-width: none;
+    }
+    .layout__left-bottom{
+        justify-content: space-between;
+    }
+    .layout__left-button-text{
+        text-align: center;
+    }
+    .apartment__grid{
+        grid-template-columns: repeat(3,1fr);
+    } 
+    
+}
+
+@media (max-width: 991px){
+    .header__nav{
+        display: none;
+    }
+    .burger-menu {
+        display: inline-block;
+    }
+    .apartment__grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        max-height: 400px;
+        right: 0px;
+        
+    }
+    .slider__right-viuwe-text{
+        margin-top: 0px;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .relative{
+        margin-top: 20px;
+    }
+    .slider__right-img{
+        right: 0px;
+        left: 0px;
+    }
+    .slider__left h1{
+        font-size: 55px;
+    }
+    .slider__button{
+        margin-top: 150px;
+    }
+    .slider__right-viuwe-text::after{
+        width: 250px;
+    }
+    .about__down{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .about__up{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0;
+    }
+    .about__up-nav{
+        justify-content: center;
+    }
+
+    .about__up-img img{
+        width: 100%;
+        height: 100%;
+
+    }
+    
+}
+
+
+
+@media (max-width: 768px){
+    .buton__row{
+        justify-content: space-between;
+    }
+    .s-button-prev-lock{
+        margin-right: 100px;
+    }
+    .slider__right{
+        display: none;
+    }
+    .slider__left{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .slider__element::before{
+        display: none;
+    }
+    .slider__element::after{
+        display: none;
+    }
+    .slider__left h1{
+       margin: 0px;
+       text-align: center;
+    }
+    .slider__left h5{
+        text-align: center;
+        margin: 0px;
+    }
+    .slider__button{
+        margin-top: 30px;
+    }
+    .apartment__grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .layout__right .add::after{
+        width: 46%;
+        height: 100%;
+        left: 55%;
+        top: 0;
+        
+    }
+    .layout__right .hidden::before{
+        width: 55%;
+        height: 100%;
+        right: 0;
+        top: 0;
+    }
+    .layout__right .hidden::after{
+        width: 55%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+    .layout__right .add::before{
+        width: 46%;
+        height: 100%;
+        left: 55%;
+        top: 0;
+    }
+    .circle::before{
+        display: none;
+    }
+    .circle::after{
+        display: none;
+    }
+    .layout__left h2{
+        font-size: 40px;
+    }
+    .apartment__text{
+        font-size: 40px;
+    }
+    .apartment__text{
+        font-size: 30px;
+        text-align: center;
+    }
+    .header__contact-number{
+        font-size: 20px;
+    }
+    .header__contact{
+        align-items: start;
+    }
+    .layout__left h2{
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 568px){
+    .about__down{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 343px){
+    .header__contact{
+        display: none;
+    }
+}
+
